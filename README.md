@@ -1,4 +1,4 @@
-# The Last of Us — Survival Game
+# The Last of Us — Zombie Survival Game
 
 A zombie survival strategy game written in **Java** with a **JavaFX** GUI. 
 
