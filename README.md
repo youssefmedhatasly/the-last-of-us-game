@@ -1,6 +1,6 @@
-# The Last of Us — Turn-Based Survival Game
+# The Last of Us — Survival Game
 
-A turn-based zombie survival strategy game written in **Java** with a **JavaFX** GUI. It was originally built as a university course project, then revisited with a full visual redesign.
+A zombie survival strategy game written in **Java** with a **JavaFX** GUI. 
 
 ![Hero selection](docs/hero-select.png)
 
