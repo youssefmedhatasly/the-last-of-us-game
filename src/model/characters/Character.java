@@ -84,7 +84,6 @@ public abstract class Character {
 		} else if (this instanceof Hero) {
 			Game.heroes.remove(this);
 		}
-		//Game.map[p.x][p.y] = new CharacterCell(null);
 		((CharacterCell) Game.map[p.x][p.y]).setCharacter(null);
 	}
 

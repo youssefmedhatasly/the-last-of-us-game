@@ -52,10 +52,8 @@ public class Game {
 			try {
 				zombie.attack();
 			} catch (NotEnoughActionsException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			} catch (InvalidTargetException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			zombie.setTarget(null);

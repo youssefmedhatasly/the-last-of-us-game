@@ -64,13 +64,11 @@ public class view extends Application {
 	private Stage stage;
 	private Image imgFighter, imgMedic, imgExplorer, imgZombie, imgSupply, imgVaccine;
 
-	// game state (UI side)
 	private Hero selectedHero;
 	private boolean targetMode = false;
 	private boolean gameEnded = false;
 	private int turn = 1;
 
-	// game screen nodes
 	private StackPane rootStack;
 	private GridPane mapGrid;
 	private Button[][] cells;
@@ -84,10 +82,6 @@ public class view extends Application {
 	private ImageView targetPortrait;
 	private VBox teamList, logList;
 	private ToggleButton targetBtn;
-
-	// ===================================================================
-	// Startup
-	// ===================================================================
 
 	@Override
 	public void start(Stage primaryStage) {
@@ -130,10 +124,6 @@ public class view extends Application {
 		stage.setMinHeight(600);
 		stage.centerOnScreen();
 	}
-
-	// ===================================================================
-	// Hero selection screen
-	// ===================================================================
 
 	private void showHeroSelect() {
 		resetGameState();
@@ -239,10 +229,6 @@ public class view extends Application {
 		return row;
 	}
 
-	// ===================================================================
-	// Game screen
-	// ===================================================================
-
 	private void startGame(Hero h) {
 		Game.startGame(h);
 		selectedHero = h;
@@ -252,7 +238,6 @@ public class view extends Application {
 	}
 
 	private void buildGameScreen() {
-		// ---- map ----
 		mapGrid = new GridPane();
 		mapGrid.setHgap(3);
 		mapGrid.setVgap(3);
@@ -268,7 +253,7 @@ public class view extends Application {
 				b.setFocusTraversable(false);
 				b.setOnMouseClicked(e -> onCellClicked(fx, fy, e));
 				cells[x][y] = b;
-				// row 0 of the model is the bottom of the screen (UP = x + 1)
+				// model row 0 is drawn at the bottom
 				mapGrid.add(b, y, SIZE - 1 - x);
 			}
 		}
@@ -287,12 +272,10 @@ public class view extends Application {
 		VBox mapPanel = new VBox(10, statusBar, mapGrid, legend(), modeHint);
 		mapPanel.setAlignment(Pos.TOP_CENTER);
 
-		// ---- sidebar column A: hero, target, team ----
 		VBox colA = new VBox(12, heroPanel(), targetPanel(), teamPanel());
 		colA.setPrefWidth(270);
 		colA.setMinWidth(250);
 
-		// ---- sidebar column B: actions, movement, log ----
 		VBox logPanel = logPanel();
 		VBox.setVgrow(logPanel, Priority.ALWAYS);
 		VBox colB = new VBox(12, actionsPanel(), movePanel(), logPanel);
@@ -478,8 +461,6 @@ public class view extends Application {
 		return p;
 	}
 
-	// ---- small UI helpers ----
-
 	private HBox labeledRow(String label, Node middle, Label right) {
 		Label l = new Label(label);
 		l.getStyleClass().add("stat-label");
@@ -593,10 +574,6 @@ public class view extends Application {
 			return "Special: fully heal an adjacent hero (or yourself).";
 		return "Special: reveal the entire map for this turn.";
 	}
-
-	// ===================================================================
-	// Rendering
-	// ===================================================================
 
 	private void refresh() {
 		renderMap();
@@ -819,10 +796,6 @@ public class view extends Application {
 			logList.getChildren().get(i).setOpacity(1.0 - i * 0.11);
 	}
 
-	// ===================================================================
-	// Input
-	// ===================================================================
-
 	private void onKey(KeyEvent e) {
 		if (gameEnded)
 			return;
@@ -891,10 +864,6 @@ public class view extends Application {
 		}
 		return true;
 	}
-
-	// ===================================================================
-	// Actions
-	// ===================================================================
 
 	private void doMove(Direction d) {
 		if (!ready())
@@ -1010,10 +979,6 @@ public class view extends Application {
 		else if (Game.checkGameOver())
 			showEndScreen(false);
 	}
-
-	// ===================================================================
-	// End screen
-	// ===================================================================
 
 	private void showEndScreen(boolean won) {
 		gameEnded = true;

@@ -1,5 +1,3 @@
-/* ===== The Last of Us - dark survival theme ===== */
-
 .root {
     -fx-font-family: "Helvetica Neue", "Segoe UI", "Arial";
     -fx-font-size: 13px;
@@ -16,8 +14,6 @@
 }
 
 .label { -fx-text-fill: #d9e2dc; }
-
-/* ---------- Menu / hero select ---------- */
 
 .menu-root {
     -fx-background-color: radial-gradient(center 50% 20%, radius 90%, #1d2b24 0%, #0b100e 100%);
@@ -74,8 +70,6 @@
     -fx-background-color: rgba(227,179,65,0.22); -fx-text-fill: accent;
 }
 
-/* ---------- Progress bars ---------- */
-
 .progress-bar { -fx-padding: 0; }
 .progress-bar > .track {
     -fx-background-color: #0a0e0c;
@@ -95,8 +89,6 @@
 .bar-act > .bar     { -fx-background-color: linear-gradient(to right, #2c7bb0, #4fb0ea); }
 .bar-dmg > .bar     { -fx-background-color: linear-gradient(to right, #b8343a, #f06a6e); }
 .bar-zombie > .bar  { -fx-background-color: linear-gradient(to right, #7b2d8f, #b552cc); }
-
-/* ---------- Buttons ---------- */
 
 .primary-button {
     -fx-background-color: linear-gradient(to bottom, #f0c457, #d9a52f);
@@ -166,8 +158,6 @@
 .arrow { -fx-fill: #c9d3cd; }
 .arrow-btn:hover .arrow { -fx-fill: accent; }
 
-/* ---------- Game layout ---------- */
-
 .game-root {
     -fx-background-color: linear-gradient(to bottom right, #111915, #0a0e0c);
 }
@@ -228,8 +218,6 @@
     -fx-background-radius: 8;
     -fx-padding: 6 12;
 }
-
-/* ---------- Map ---------- */
 
 .map {
     -fx-padding: 10;
@@ -292,16 +280,12 @@
     -fx-border-radius: 4;
 }
 
-/* ---------- Log ---------- */
-
 .log-entry { -fx-font-size: 12px; }
 .log-info { -fx-text-fill: #c9d3cd; }
 .log-good { -fx-text-fill: #7fdc91; }
 .log-warn { -fx-text-fill: #f0c457; }
 .log-bad  { -fx-text-fill: #ff8b8f; }
 .log-turn { -fx-text-fill: #7fc4f0; -fx-font-weight: bold; }
-
-/* ---------- Tooltip ---------- */
 
 .tooltip {
     -fx-background-color: #1b2621;
@@ -311,8 +295,6 @@
     -fx-padding: 8 10;
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 10, 0.2, 0, 2);
 }
-
-/* ---------- End screen ---------- */
 
 .overlay { -fx-background-color: rgba(4,7,6,0.82); }
 .end-card {
