@@ -89,8 +89,4 @@ src/
 Heroes.csv        Playable heroes: name, class, max HP, actions, damage
 ```
 
-## Tests
 
-`src/tests/M2PublicTests.java` contains the course's JUnit 4 tests for the game engine. They are not needed to play. To run them, add JUnit 4 to the classpath in your IDE.
-
-![Game over](docs/game-over.png)
