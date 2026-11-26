@@ -51,7 +51,7 @@ Hover over any character to see its full stats.
 ### Steps
 
 ```bash
-git clone https://github.com/<your-username>/the-last-of-us-game.git
+git clone https://github.com/youssefmedhatasly/the-last-of-us-game.git
 cd the-last-of-us-game
 
 # point the project at your JavaFX SDK (one-time)
